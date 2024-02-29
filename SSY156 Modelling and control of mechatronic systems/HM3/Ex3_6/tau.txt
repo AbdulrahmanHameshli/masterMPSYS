@@ -1,0 +1,5 @@
+tau =
+ 
+I1*q1ppr + I2*q1ppr + I2*q2ppr + (L1^2*m1*q1ppr)/4 + L1^2*m2*q1ppr + (L2^2*m2*q1ppr)/4 + (L2^2*m2*q2ppr)/4 - (L1*g*m1*sin(q1))/2 - L1*g*m2*sin(q1) - (L2*g*m2*cos(q1)*sin(q2))/2 - (L2*g*m2*cos(q2)*sin(q1))/2 + L1*L2*m2*q1ppr*cos(q2) + (L1*L2*m2*q2ppr*cos(q2))/2 - (L1*L2*m2*q1p*q2pr*sin(q2))/2 - (L1*L2*m2*q2p*q1pr*sin(q2))/2 - (L1*L2*m2*q2p*q2pr*sin(q2))/2
+                                                                                                                                                                                I2*q1ppr + I2*q2ppr + (L2^2*m2*q1ppr)/4 + (L2^2*m2*q2ppr)/4 - (L2*g*m2*cos(q1)*sin(q2))/2 - (L2*g*m2*cos(q2)*sin(q1))/2 + (L1*L2*m2*q1ppr*cos(q2))/2 + (L1*L2*m2*q1p*q1pr*sin(q2))/2
+ 

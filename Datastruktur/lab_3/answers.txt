@@ -1,0 +1,123 @@
+/******************************************************************************
+** Lab 3: Plagiarism detection
+******************************************************************************/
+
+Group members:
+- [...]
+- [...]
+- [...]
+
+/******************************************************************************
+** Task 1: Complexity analysis
+**
+** 1. What is the asymptotic complexity of find_similarity?
+**    Answer in terms of N, the total number of 5-grams in the input files.
+**    Assume that the number of duplicate occurrences of 5-grams is
+**    a small constant - that is, there is not much plagiarised text.
+**    Explain briefly.
+******************************************************************************/
+
+[...]
+
+/******************************************************************************
+** 2. How long did the program take on the 'tiny' and 'small' directories?
+**    Is the ratio between the times what you would expect, given the complexity?
+**    Explain very briefly why.
+******************************************************************************/
+
+[...]
+
+/******************************************************************************
+** 3. How long do you predict the program would take to run on
+**    the 'big' directory? Show your calculations.
+******************************************************************************/
+
+[...]
+
+/******************************************************************************
+** Task 2: Make use of an index
+**
+** 4. Now what is the total asymptotic complexities of running and build_index
+**    and find_similarity? Include brief justification. Again, assume a total
+**    of N 5-grams, and a constant number of duplicate occurrences of 5-grams.
+******************************************************************************/
+
+[...]
+
+/******************************************************************************
+** 5 (optional). What if the total similarity score is an arbitrary number S,
+**               rather than a small constant?
+******************************************************************************/
+
+[...]
+
+/******************************************************************************
+** Task 3: Implement hash tables with linear probing
+**
+** 6. Run lab3.py on the big document set and, with the help of the statistics
+**    it prints out, answer this question:
+**
+**    Assume that we call `index.get` on a random key which is present in
+**    the hash table. How many array accesses are needed on average to
+**    find the key? And how many in the worst case? Explain how you got
+**    your answer.
+**
+**    Include the hash table statistics from running `lab3.py documents/big`
+**    in your answer. Answer with a number calculated for that document set.
+******************************************************************************/
+
+Hash table statistics:
+  files: ...
+  index: ...
+  similarity: ...
+
+[...]
+
+/******************************************************************************
+** Task 4: Improve a hash function
+**
+** 7. How did you improve the hash function?
+**    Briefly explain why your design gives a better distribution of hash
+**    codes than the bad hash function.
+******************************************************************************/
+
+[...]
+
+/******************************************************************************
+** Appendix: General information
+**
+** A. Approximately how many hours did you spend on the assignment?
+******************************************************************************/
+
+[..group member..]:  [..hours..]
+[..group member..]:  [..hours..]
+[..group member..]:  [..hours..]
+
+/******************************************************************************
+** B. Are there any known bugs / limitations?
+******************************************************************************/
+
+[...]
+
+/******************************************************************************
+** C. Did you collaborate with any other students on this lab?
+**    If so, please write in what way you collaborated and with whom.
+**    Also include any resources (including the web) that you may
+**    may have used in creating your design.
+******************************************************************************/
+
+[...]
+
+/******************************************************************************
+** D. Describe any serious problems you encountered.                    
+******************************************************************************/
+
+[...]
+
+/******************************************************************************
+** E. List any other comments here.
+**    Feel free to provide any feedback on how much you learned 
+**    from doing the assignment, and whether you enjoyed it.                                             
+******************************************************************************/
+
+[...]

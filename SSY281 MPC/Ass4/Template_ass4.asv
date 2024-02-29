@@ -1,0 +1,193 @@
+
+
+clc
+close all
+clear
+%% Q1a
+% represent the polyhedron in V- and H-representation and plot the two
+% versions separately
+
+% Define H-representation
+A = [0  1;
+    -1  0;
+    -1 -1;
+     1  1];
+b = [0 0 1 1]';
+H_representatin = Polyhedron(A, b);
+
+V = [0 0; 1 0; 0 -1]; 
+
+R = [1 -1];
+v_representatin = Polyhedron('V', V, 'R', R);
+
+figure()
+subplot(1,2,1)
+% plot(H_representatin)
+% title('H-representation')
+% subplot(1,2,2)
+% plot(v_representatin)
+% title('V-representation')
+
+P_H_1a = H_representatin;
+P_V_1a = v_representatin;
+%% Q1b
+% perform some sets operations
+
+% Close all figures and clear workspace
+close all
+clear all
+
+% Define Polyhedron P
+A1 = [0  1;
+      1  0;
+      0 -1;
+     -1  0];
+b1 = [2 2 2 2]';
+P = Polyhedron('A', A1, 'b', b1);
+
+% Define Polyhedron Q
+A2 = [-1 -1;
+       1  1;
+       1 -1;
+      -1  1];
+b2 = [1 1 1 1]';
+Q = Polyhedron('A', A2, 'b', b2);
+
+% Define different combinations of polyhedrons
+p1 = P;
+p2 = Q;
+p3 = P + Q;
+p4 = P - Q;
+p5 = (P - Q) + Q;
+p6 = (P + Q) - Q;
+p7 = (Q - P) + P;
+p8 = (Q + P) - P;
+
+% Plot the polyhedrons
+figure()
+titles = {'P', 'Q', 'P+Q', 'P-Q', '(P-Q)+Q', '(P+Q)-Q', '(Q-P)+P', '(Q+P)-P'};
+for i = 1:8
+    subplot(4, 2, i)
+    plot(eval(sprintf('p%d', i)))
+    title(titles{i})
+    axis([-3 3 -3 3])
+end
+
+
+
+
+
+P_1b = p1;
+Q_1b = p2;
+Mink_sum_1b =p3;
+Pontr_diff_1b = p4;
+PminusQplusQ_1b = p5;
+PplusQminusQ_1b =p6;
+QminusPplusP_1b = p7;
+QplusPminusP_1b =p8;
+%% Q2a
+% show that the set S is positively invariant for the system and plot it
+
+% ROBOT ARM MOVEMENT SIMULATION
+close all
+clear all
+clc
+A = [0.8   0.4;
+    -0.4   0.8];
+Ain = [1  0;
+     0  1;
+    -1  0;
+     0 -1;
+     1  1;
+     1 -1;
+    -1  1;
+    -1 -1];
+bin = [1 1 1 1 1.5 1.5 1.5 1.5]';
+S = Polyhedron('A', Ain, 'b', bin);
+Reachable = Polyhedron('A', Ain * inv(A), 'b', bin);
+plot(S)
+hold on
+plot(Reachable)
+legend('Initial Position', 'Reachable Positions')
+
+
+S_2a = S;
+%% Q2b
+% calculate the one-step reachable set from S and plot it together with S
+% Clear the workspace
+close all
+clc
+
+
+B = [0 1]';
+J = [1  0;
+     0  1;
+    -1  0;
+     0 -1;
+     1  1;
+     1 -1;
+    -1  1;
+    -1 -1];
+Au = [1 -1]';
+bu = [1 1]';
+
+% polyhedron S is defined in previous question
+
+% Define set U
+U = Polyhedron('lb',-1,'ub',1);
+
+% Reachable set
+AA = [Ain*inv(A)   -Ain*inv(A)*B
+      zeros(2,2)         Au];
+
+bb = [bin; bu];
+
+
+S_Reach = Polyhedron('A',AA,'b',bb);
+
+% Projection
+%S_Reach_proj = A*S + B*U;
+S_Reach_proj = projection(S_Reach,[1:2]);
+
+
+
+% Plot
+figure()
+subplot(1,2,1)
+plot(S_Reach,"color")
+hold on
+plot(S)
+title('S and S_{tot} in 3D')
+legend('S_{tot}','S')
+xlabel('x_1','FontSize',12)
+ylabel('x_2','FontSize',12)
+zlabel('u','FontSize',12)
+
+subplot(1,2,2)
+plot(S_Reach_proj)
+hold on
+plot(S)
+title('S and reach(S). A projection on x_1-x_2 plane')
+legend('reach(S)','S')
+xlabel('x_1','FontSize',12)
+ylabel('x_2','FontSize',12)
+
+
+reach_set_S_2b = 'One-step reachable set from S';
+%% Q2c
+% calculate the one-step precursor set of S and plot it together with S
+pre_set_S_2c = 'One-step precursor set of S'; % project tau into 1st and 2nd
+dimensions
+%% Q3a
+% find shortest prediction horizon such that the RH controller is feasible
+N_3a = 'Shortest prediction horizon that makes the RH controller feasible';
+%% Q3b
+% find out if the RH controller is persistently feasible all the way to the
+% origin
+maxContrInvSet_3b = 'Maximal control invariant set for the system';
+%% Q3c
+% plot the set of feasible initial states for the two controllers
+% previously designed and discuss about the size of the problems
+X0_1_3c = 'Set of feasible initial states for controller designed in Q3a';
+X0_2_3c = 'Set of feasible initial states for controller designed in Q3b';
+

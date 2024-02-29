@@ -1,0 +1,545 @@
+esp= 5, min_sam 70
+Estimated number of clusters,= : 2
+Estimated number of noise points: 6649
+esp= 5, min_sam 75
+Estimated number of clusters,= : 2
+Estimated number of noise points: 6979
+esp= 5, min_sam 80
+Estimated number of clusters,= : 2
+Estimated number of noise points: 7278
+esp= 5, min_sam 85
+Estimated number of clusters,= : 3
+Estimated number of noise points: 7542
+esp= 5, min_sam 90
+Estimated number of clusters,= : 3
+Estimated number of noise points: 7869
+esp= 5, min_sam 95
+Estimated number of clusters,= : 4
+Estimated number of noise points: 8181
+esp= 5, min_sam 100
+Estimated number of clusters,= : 3
+Estimated number of noise points: 8841
+esp= 5, min_sam 105
+Estimated number of clusters,= : 3
+Estimated number of noise points: 9149
+esp= 5, min_sam 110
+Estimated number of clusters,= : 2
+Estimated number of noise points: 9479
+esp= 5, min_sam 115
+Estimated number of clusters,= : 2
+Estimated number of noise points: 9909
+esp= 7, min_sam 70
+Estimated number of clusters,= : 4
+Estimated number of noise points: 4052
+esp= 7, min_sam 75
+Estimated number of clusters,= : 4
+Estimated number of noise points: 4359
+esp= 7, min_sam 80
+Estimated number of clusters,= : 5
+Estimated number of noise points: 4567
+esp= 7, min_sam 85
+Estimated number of clusters,= : 5
+Estimated number of noise points: 4794
+esp= 7, min_sam 90
+Estimated number of clusters,= : 3
+Estimated number of noise points: 5072
+esp= 7, min_sam 95
+Estimated number of clusters,= : 3
+Estimated number of noise points: 5157
+esp= 7, min_sam 100
+Estimated number of clusters,= : 2
+Estimated number of noise points: 5327
+esp= 7, min_sam 105
+Estimated number of clusters,= : 2
+Estimated number of noise points: 5450
+esp= 7, min_sam 110
+Estimated number of clusters,= : 2
+Estimated number of noise points: 5562
+esp= 7, min_sam 115
+Estimated number of clusters,= : 2
+Estimated number of noise points: 5686
+esp= 9, min_sam 70
+Estimated number of clusters,= : 6
+Estimated number of noise points: 2656
+esp= 9, min_sam 75
+Estimated number of clusters,= : 4
+Estimated number of noise points: 2859
+esp= 9, min_sam 80
+Estimated number of clusters,= : 4
+Estimated number of noise points: 2964
+esp= 9, min_sam 85
+Estimated number of clusters,= : 4
+Estimated number of noise points: 3056
+esp= 9, min_sam 90
+Estimated number of clusters,= : 4
+Estimated number of noise points: 3190
+esp= 9, min_sam 95
+Estimated number of clusters,= : 4
+Estimated number of noise points: 3283
+esp= 9, min_sam 100
+Estimated number of clusters,= : 5
+Estimated number of noise points: 3444
+esp= 9, min_sam 105
+Estimated number of clusters,= : 4
+Estimated number of noise points: 3706
+esp= 9, min_sam 110
+Estimated number of clusters,= : 4
+Estimated number of noise points: 3806
+esp= 9, min_sam 115
+Estimated number of clusters,= : 4
+Estimated number of noise points: 3947
+esp= 11, min_sam 70
+Estimated number of clusters,= : 6
+Estimated number of noise points: 1824
+esp= 11, min_sam 75
+Estimated number of clusters,= : 6
+Estimated number of noise points: 1878
+esp= 11, min_sam 80
+Estimated number of clusters,= : 6
+Estimated number of noise points: 1937
+esp= 11, min_sam 85
+Estimated number of clusters,= : 8
+Estimated number of noise points: 2081
+esp= 11, min_sam 90
+Estimated number of clusters,= : 5
+Estimated number of noise points: 2398
+esp= 11, min_sam 95
+Estimated number of clusters,= : 5
+Estimated number of noise points: 2467
+esp= 11, min_sam 100
+Estimated number of clusters,= : 4
+Estimated number of noise points: 2623
+esp= 11, min_sam 105
+Estimated number of clusters,= : 4
+Estimated number of noise points: 2687
+esp= 11, min_sam 110
+Estimated number of clusters,= : 4
+Estimated number of noise points: 2737
+esp= 11, min_sam 115
+Estimated number of clusters,= : 4
+Estimated number of noise points: 2800
+esp= 13, min_sam 70
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1438
+esp= 13, min_sam 75
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1485
+esp= 13, min_sam 80
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1509
+esp= 13, min_sam 85
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1538
+esp= 13, min_sam 90
+Estimated number of clusters,= : 4
+Estimated number of noise points: 1611
+esp= 13, min_sam 95
+Estimated number of clusters,= : 4
+Estimated number of noise points: 1673
+esp= 13, min_sam 100
+Estimated number of clusters,= : 4
+Estimated number of noise points: 1713
+esp= 13, min_sam 105
+Estimated number of clusters,= : 6
+Estimated number of noise points: 1772
+esp= 13, min_sam 110
+Estimated number of clusters,= : 5
+Estimated number of noise points: 1996
+esp= 13, min_sam 115
+Estimated number of clusters,= : 4
+Estimated number of noise points: 2243
+esp= 15, min_sam 70
+Estimated number of clusters,= : 4
+Estimated number of noise points: 1137
+esp= 15, min_sam 75
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1248
+esp= 15, min_sam 80
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1276
+esp= 15, min_sam 85
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1320
+esp= 15, min_sam 90
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1354
+esp= 15, min_sam 95
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1372
+esp= 15, min_sam 100
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1407
+esp= 15, min_sam 105
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1418
+esp= 15, min_sam 110
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1441
+esp= 15, min_sam 115
+Estimated number of clusters,= : 4
+Estimated number of noise points: 1493
+esp= 17, min_sam 70
+Estimated number of clusters,= : 4
+Estimated number of noise points: 930
+esp= 17, min_sam 75
+Estimated number of clusters,= : 4
+Estimated number of noise points: 964
+esp= 17, min_sam 80
+Estimated number of clusters,= : 4
+Estimated number of noise points: 1007
+esp= 17, min_sam 85
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1128
+esp= 17, min_sam 90
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1155
+esp= 17, min_sam 95
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1182
+esp= 17, min_sam 100
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1201
+esp= 17, min_sam 105
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1219
+esp= 17, min_sam 110
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1240
+esp= 17, min_sam 115
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1270
+esp= 19, min_sam 70
+Estimated number of clusters,= : 4
+Estimated number of noise points: 774
+esp= 19, min_sam 75
+Estimated number of clusters,= : 4
+Estimated number of noise points: 794
+esp= 19, min_sam 80
+Estimated number of clusters,= : 4
+Estimated number of noise points: 821
+esp= 19, min_sam 85
+Estimated number of clusters,= : 4
+Estimated number of noise points: 869
+esp= 19, min_sam 90
+Estimated number of clusters,= : 4
+Estimated number of noise points: 924
+esp= 19, min_sam 95
+Estimated number of clusters,= : 4
+Estimated number of noise points: 968
+esp= 19, min_sam 100
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1084
+esp= 19, min_sam 105
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1092
+esp= 19, min_sam 110
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1099
+esp= 19, min_sam 115
+Estimated number of clusters,= : 3
+Estimated number of noise points: 1107
+esp= 21, min_sam 70
+Estimated number of clusters,= : 6
+Estimated number of noise points: 520
+esp= 21, min_sam 75
+Estimated number of clusters,= : 5
+Estimated number of noise points: 616
+esp= 21, min_sam 80
+Estimated number of clusters,= : 4
+Estimated number of noise points: 719
+esp= 21, min_sam 85
+Estimated number of clusters,= : 4
+Estimated number of noise points: 740
+esp= 21, min_sam 90
+Estimated number of clusters,= : 4
+Estimated number of noise points: 758
+esp= 21, min_sam 95
+Estimated number of clusters,= : 4
+Estimated number of noise points: 788
+esp= 21, min_sam 100
+Estimated number of clusters,= : 4
+Estimated number of noise points: 822
+esp= 21, min_sam 105
+Estimated number of clusters,= : 4
+Estimated number of noise points: 839
+esp= 21, min_sam 110
+Estimated number of clusters,= : 3
+Estimated number of noise points: 974
+esp= 21, min_sam 115
+Estimated number of clusters,= : 3
+Estimated number of noise points: 996
+esp= 23, min_sam 70
+Estimated number of clusters,= : 6
+Estimated number of noise points: 418
+esp= 23, min_sam 75
+Estimated number of clusters,= : 6
+Estimated number of noise points: 426
+esp= 23, min_sam 80
+Estimated number of clusters,= : 4
+Estimated number of noise points: 618
+esp= 23, min_sam 85
+Estimated number of clusters,= : 4
+Estimated number of noise points: 637
+esp= 23, min_sam 90
+Estimated number of clusters,= : 4
+Estimated number of noise points: 652
+esp= 23, min_sam 95
+Estimated number of clusters,= : 4
+Estimated number of noise points: 673
+esp= 23, min_sam 100
+Estimated number of clusters,= : 4
+Estimated number of noise points: 706
+esp= 23, min_sam 105
+Estimated number of clusters,= : 4
+Estimated number of noise points: 719
+esp= 23, min_sam 110
+Estimated number of clusters,= : 4
+Estimated number of noise points: 764
+esp= 23, min_sam 115
+Estimated number of clusters,= : 4
+Estimated number of noise points: 780
+esp= 25, min_sam 70
+Estimated number of clusters,= : 6
+Estimated number of noise points: 257
+esp= 25, min_sam 75
+Estimated number of clusters,= : 5
+Estimated number of noise points: 361
+esp= 25, min_sam 80
+Estimated number of clusters,= : 6
+Estimated number of noise points: 390
+esp= 25, min_sam 85
+Estimated number of clusters,= : 4
+Estimated number of noise points: 578
+esp= 25, min_sam 90
+Estimated number of clusters,= : 4
+Estimated number of noise points: 588
+esp= 25, min_sam 95
+Estimated number of clusters,= : 4
+Estimated number of noise points: 593
+esp= 25, min_sam 100
+Estimated number of clusters,= : 4
+Estimated number of noise points: 603
+esp= 25, min_sam 105
+Estimated number of clusters,= : 4
+Estimated number of noise points: 614
+esp= 25, min_sam 110
+Estimated number of clusters,= : 4
+Estimated number of noise points: 638
+esp= 25, min_sam 115
+Estimated number of clusters,= : 4
+Estimated number of noise points: 654
+esp= 27, min_sam 70
+Estimated number of clusters,= : 6
+Estimated number of noise points: 188
+esp= 27, min_sam 75
+Estimated number of clusters,= : 5
+Estimated number of noise points: 295
+esp= 27, min_sam 80
+Estimated number of clusters,= : 5
+Estimated number of noise points: 328
+esp= 27, min_sam 85
+Estimated number of clusters,= : 5
+Estimated number of noise points: 347
+esp= 27, min_sam 90
+Estimated number of clusters,= : 4
+Estimated number of noise points: 437
+esp= 27, min_sam 95
+Estimated number of clusters,= : 4
+Estimated number of noise points: 539
+esp= 27, min_sam 100
+Estimated number of clusters,= : 4
+Estimated number of noise points: 556
+esp= 27, min_sam 105
+Estimated number of clusters,= : 4
+Estimated number of noise points: 568
+esp= 27, min_sam 110
+Estimated number of clusters,= : 4
+Estimated number of noise points: 575
+esp= 27, min_sam 115
+Estimated number of clusters,= : 4
+Estimated number of noise points: 581
+
+
+
+
+
+esp= 29, min_sam 70
+Estimated number of clusters,= : 5
+Estimated number of noise points: 111
+esp= 29, min_sam 75
+Estimated number of clusters,= : 5
+Estimated number of noise points: 141
+esp= 29, min_sam 80
+Estimated number of clusters,= : 6
+Estimated number of noise points: 184
+esp= 29, min_sam 85
+Estimated number of clusters,= : 5
+Estimated number of noise points: 281
+esp= 29, min_sam 90
+Estimated number of clusters,= : 4
+Estimated number of noise points: 392
+esp= 29, min_sam 95
+Estimated number of clusters,= : 4
+Estimated number of noise points: 402
+esp= 29, min_sam 100
+Estimated number of clusters,= : 4
+Estimated number of noise points: 412
+esp= 29, min_sam 105
+Estimated number of clusters,= : 3
+Estimated number of noise points: 514
+esp= 29, min_sam 110
+Estimated number of clusters,= : 3
+Estimated number of noise points: 519
+esp= 29, min_sam 115
+Estimated number of clusters,= : 3
+Estimated number of noise points: 535
+esp= 31, min_sam 70
+Estimated number of clusters,= : 5
+Estimated number of noise points: 61
+esp= 31, min_sam 75
+Estimated number of clusters,= : 5
+Estimated number of noise points: 70
+esp= 31, min_sam 80
+Estimated number of clusters,= : 5
+Estimated number of noise points: 88
+esp= 31, min_sam 85
+Estimated number of clusters,= : 5
+Estimated number of noise points: 106
+esp= 31, min_sam 90
+Estimated number of clusters,= : 6
+Estimated number of noise points: 137
+esp= 31, min_sam 95
+Estimated number of clusters,= : 5
+Estimated number of noise points: 269
+esp= 31, min_sam 100
+Estimated number of clusters,= : 5
+Estimated number of noise points: 274
+esp= 31, min_sam 105
+Estimated number of clusters,= : 4
+Estimated number of noise points: 367
+esp= 31, min_sam 110
+Estimated number of clusters,= : 3
+Estimated number of noise points: 480
+esp= 31, min_sam 115
+Estimated number of clusters,= : 3
+Estimated number of noise points: 481
+esp= 33, min_sam 70
+Estimated number of clusters,= : 4
+Estimated number of noise points: 32
+esp= 33, min_sam 75
+Estimated number of clusters,= : 5
+Estimated number of noise points: 37
+esp= 33, min_sam 80
+Estimated number of clusters,= : 5
+Estimated number of noise points: 40
+esp= 33, min_sam 85
+Estimated number of clusters,= : 5
+Estimated number of noise points: 49
+esp= 33, min_sam 90
+Estimated number of clusters,= : 5
+Estimated number of noise points: 61
+esp= 33, min_sam 95
+Estimated number of clusters,= : 5
+Estimated number of noise points: 82
+esp= 33, min_sam 100
+Estimated number of clusters,= : 5
+Estimated number of noise points: 194
+esp= 33, min_sam 105
+Estimated number of clusters,= : 5
+Estimated number of noise points: 231
+esp= 33, min_sam 110
+Estimated number of clusters,= : 5
+Estimated number of noise points: 243
+esp= 33, min_sam 115
+Estimated number of clusters,= : 4
+Estimated number of noise points: 336
+esp= 35, min_sam 70
+Estimated number of clusters,= : 4
+Estimated number of noise points: 18
+esp= 35, min_sam 75
+Estimated number of clusters,= : 4
+Estimated number of noise points: 24
+esp= 35, min_sam 80
+Estimated number of clusters,= : 5
+Estimated number of noise points: 25
+esp= 35, min_sam 85
+Estimated number of clusters,= : 5
+Estimated number of noise points: 30
+esp= 35, min_sam 90
+Estimated number of clusters,= : 5
+Estimated number of noise points: 32
+esp= 35, min_sam 95
+Estimated number of clusters,= : 5
+Estimated number of noise points: 37
+esp= 35, min_sam 100
+Estimated number of clusters,= : 4
+Estimated number of noise points: 145
+esp= 35, min_sam 105
+Estimated number of clusters,= : 4
+Estimated number of noise points: 166
+esp= 35, min_sam 110
+Estimated number of clusters,= : 5
+Estimated number of noise points: 169
+esp= 35, min_sam 115
+Estimated number of clusters,= : 5
+Estimated number of noise points: 186
+esp= 37, min_sam 70
+Estimated number of clusters,= : 3
+Estimated number of noise points: 16
+esp= 37, min_sam 75
+Estimated number of clusters,= : 3
+Estimated number of noise points: 16
+esp= 37, min_sam 80
+Estimated number of clusters,= : 4
+Estimated number of noise points: 16
+esp= 37, min_sam 85
+Estimated number of clusters,= : 5
+Estimated number of noise points: 21
+esp= 37, min_sam 90
+Estimated number of clusters,= : 5
+Estimated number of noise points: 21
+esp= 37, min_sam 95
+Estimated number of clusters,= : 5
+Estimated number of noise points: 24
+esp= 37, min_sam 100
+Estimated number of clusters,= : 5
+Estimated number of noise points: 28
+esp= 37, min_sam 105
+Estimated number of clusters,= : 4
+Estimated number of noise points: 126
+esp= 37, min_sam 110
+Estimated number of clusters,= : 4
+Estimated number of noise points: 137
+esp= 37, min_sam 115
+Estimated number of clusters,= : 4
+Estimated number of noise points: 144
+esp= 39, min_sam 70
+Estimated number of clusters,= : 2
+Estimated number of noise points: 11
+esp= 39, min_sam 75
+Estimated number of clusters,= : 2
+Estimated number of noise points: 11
+esp= 39, min_sam 80
+Estimated number of clusters,= : 3
+Estimated number of noise points: 15
+esp= 39, min_sam 85
+Estimated number of clusters,= : 4
+Estimated number of noise points: 15
+esp= 39, min_sam 90
+Estimated number of clusters,= : 4
+Estimated number of noise points: 15
+esp= 39, min_sam 95
+Estimated number of clusters,= : 4
+Estimated number of noise points: 15
+esp= 39, min_sam 100
+Estimated number of clusters,= : 4
+Estimated number of noise points: 19
+esp= 39, min_sam 105
+Estimated number of clusters,= : 4
+Estimated number of noise points: 115
+esp= 39, min_sam 110
+Estimated number of clusters,= : 4
+Estimated number of noise points: 118
+esp= 39, min_sam 115
+Estimated number of clusters,= : 4
+Estimated number of noise points: 118
