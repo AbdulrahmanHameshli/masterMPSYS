@@ -9,7 +9,7 @@ function plotRobot_dynamic(u)
 % global variables to have persistant markers
 persistent robot1 iviz samples vsr  efMarker fh 
 persistent number_links cfMarker
-
+% disp(u)
 % joint positions
 q=u(1:4);
 
@@ -118,7 +118,7 @@ if(samples==vsr)
         
         % Update CFs poses
         % Kinematic Parameters L1,L2,L7,L8, and alpha
-        L=abbIRB4_params;
+        L=abbIRB4_dyn_params;
 
         % Dynamic Parameters  L1,L2,L7,L8,al,L11,L21,L31,L32,L41, and L51
         Ld=abbIRB4_dyn_params;
