@@ -1,13 +1,19 @@
 
 f_1 = @(x)[3*x];
-f_2 = @(x)[x.*x.*x];
-[mu_y, Sigma_y, y_s ,x_s]= approxGaussianTransform(0,1,f_2,5000);
-figure(1)
-histogram(y_s);
+f_2 = @(x)(x.^3 + 300);
+[mu_y, Sigma_y, y_s ,x_s]= approxGaussianTransform(0,2,f_2,500000);
+
 mu_y
 Sigma_y
+
+figure(1)
+histogram(y_s);
+xlabel("Y_s")
+
 figure(2)
 histogram(x_s);
+xlabel("X_s")
+
 
 
 
