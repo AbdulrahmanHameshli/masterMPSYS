@@ -1,17 +1,26 @@
 
+clear all
 f_1 = @(x)[3*x];
-f_2 = @(x)(x.^3 + 300);
-[mu_y, Sigma_y, y_s ,x_s]= approxGaussianTransform(0,2,f_2,500000);
+f_2 = @(x)(x.^3);
+[mu_y, Sigma_y, y_s ,x_s]= approxGaussianTransform(0,2,f_2,50000);
 
+y_range = -15:1:15;
+
+
+[mu_y, Sigma_y] = affineGaussianTransform(0,2, 3, 0);
 mu_y
 Sigma_y
 
 figure(1)
-histogram(y_s);
+histogram(y_s,50,"Normalization","pdf");
 xlabel("Y_s")
+hold on 
+plot(y_range,normpdf(y_range,mu_y,sqrt(Sigma_y)));
 
 figure(2)
-histogram(x_s);
+histogram(x_s,"Normalization","pdf");
+
+
 xlabel("X_s")
 
 
@@ -19,7 +28,6 @@ xlabel("X_s")
 
 % % True  values:
 % disp('the true values is');
-% [mu_y, Sigma_y] = affineGaussianTransform(0,1, 3, 0)
 
 
 

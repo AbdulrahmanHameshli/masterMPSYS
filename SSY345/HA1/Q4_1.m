@@ -40,7 +40,7 @@ prior_theta_minus_1 = 0.5;     % Prior probability for theta = -1
 prior_theta_1 = 0.5;           % Prior probability for theta = 1
 
 % Observed data y
-observed_y = 0;
+observed_y = 0.7;
 
 % Calculate likelihoods p(y | theta = -1) and p(y | theta = 1)
 likelihood_y_given_theta_minus_1 = (1 / sqrt(2*pi*sigma_sq)) * exp(-(observed_y + 1).^2 / (2*sigma_sq));
