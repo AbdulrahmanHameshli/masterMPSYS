@@ -1,5 +1,3 @@
-
-
 %Here we give parameters for a Gaussian density. The parameter mu is the mean, and P is the covariance matrix.
 mu = [0; 10];
 P = [0.3 0;0 8];

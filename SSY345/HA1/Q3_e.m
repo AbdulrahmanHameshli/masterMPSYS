@@ -1,16 +1,11 @@
 clc
 clear
 
-
-x = rand(100);
+x = rand(1000);
 % x = unifpdf(x);
-% r = normpdf(normrnd(0,1, [10,10]));
-r = normrnd(0,1, [100,100]);
-
-
-h = @(x)(2*x);
-
-
+% r = normpdf(normrnd(0,1, [1000,1000]));
+r = normrnd(0,1, [1000,1000]);
+h = @(x)(2*x^2);
 y = h(x) + r;
 
 
