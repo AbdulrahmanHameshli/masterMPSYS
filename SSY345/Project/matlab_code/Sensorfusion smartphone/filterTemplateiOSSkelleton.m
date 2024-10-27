@@ -1,5 +1,5 @@
-function [xhat, meas] = filterTemplate(calAcc, calGyr, calMag)
-% FILTERTEMPLATE  Filter template
+function [xhat, meas] = filterTemplateiOS(m, calAcc, calGyr, calMag)
+% FILTERTEMPLATEIOS  Filter template adapted for iOS capability
 %
 % This is a template function for how to collect and filter data
 % sent from a smartphone live.  Calibration data for the
@@ -20,13 +20,36 @@ function [xhat, meas] = filterTemplate(calAcc, calGyr, calMag)
 %
 % Note that it is not necessary to provide inputs (calAcc, calGyr, calMag).
 
-  %% Setup necessary infrastructure
-  import('com.liu.sensordata.*');  % Used to receive data.
+%
+%Inputs:
+%   - m                 Mobile device object 
+%   - calAcc    [Kx3]   Accelerometer measurements used for calibration
+%   - calGyr    [Kx3]   Gyroscope measurements used for calibration
+%   - calMag    [Kx3]   Magnetometer measurements used for calibration
+% 
+%Outputs:
+%   - xhat              state estimate struct
+%   - meas              sensor measurements struct
+%
+%
+% Edited by:    Nicholas Granlund
+%               Louise Olsson
+
+
+  %% Calibration
+
+  % If calibration data is not provided - calibrate
+  if nargin < 2
+      % Do someting
+    
+  end
+
 
   %% Filter settings
   t0 = [];  % Initial time (initialize on first data received)
   nx = 4;   % Assuming that you use q as state variable.
   % Add your filter settings here.
+
 
   % Current filter state.
   x = [1; 0; 0 ;0];
@@ -42,57 +65,86 @@ function [xhat, meas] = filterTemplate(calAcc, calGyr, calMag)
                 'gyr', zeros(3, 0),...
                 'mag', zeros(3, 0),...
                 'orient', zeros(4, 0));
-  try
-    %% Create data link
-%     server = StreamSensorDataReader(3400);
-%     % Makes sure to resources are returned.
-%     sentinel = onCleanup(@() server.stop());
 
-%     server.start();  % Start data reception.
 
-    % Used for visualization.
-    figure(1);
-    subplot(1, 2, 1);
-    ownView = OrientationView('Own filter', gca);  % Used for visualization.
-    googleView = [];
-    counter = 0;  % Used to throttle the displayed frame rate.
+     % Used for visualization.
+     figure(1);
+     subplot(1, 2, 1);
+     ownView = OrientationView('Own filter', gca);  % Used for visualization.
+     googleView = [];
+     counter = 0;  % Used to throttle the displayed frame rate.
+
+
+
 
     %% Filter loop
-    while server.status()  % Repeat while data is available
+
+    % Repeat while mobile device 'm' is connected and while at least one
+    % sensor is transmitting data
+    while m.Connected && m.Logging 
       % Get the next measurement set, assume all measurements
       % within the next 5 ms are concurrent (suitable for sampling
       % in 100Hz).
 
 
+      % ------------------ SMARTPHONE SENSORS --------------------
 
-      
-      data = server.getNext(5);
+      % Gather information from the sensors
+      [t, acc, gyr, mag, dataOrient] = getiOSData(m);
 
-      if isnan(data(1))  % No new data received
-        continue;        % Skips the rest of the look
-      end
-      t = data(1)/1000;  % Extract current time
+      % ----------------------------------------------------------
+
+
 
       if isempty(t0)  % Initialize t0
         t0 = t;
       end
 
-      acc = data(1, 2:4)';
-      if ~any(isnan(acc))  % Acc measurements are available.
+
+
+      % --------------------- ACCELEROMETER ------------------------
+ 
+      % Acc measurements are available / sensor is enabled.
+      if m.AccelerationSensorEnabled
+           % Do something
+      end
+      % ------------------------------------------------------------
+    
+
+
+
+
+
+      % ----------------------- GYROSCOPE --------------------------
+
+      % Gyro measurements are available / sensor is enabled.
+      if m.AngularVelocitySensorEnabled
+            % Do something
+      end
+      % ------------------------------------------------------------
+
+
+
+
+      
+
+     % ---------------------- MAGNETOMETER ------------------------
+     
+     % Mag measurements are available / sensor is enabled.
+     if  m.MagneticSensorEnabled
         % Do something
       end
-      gyr = data(1, 5:7)';
-      if ~any(isnan(gyr))  % Gyro measurements are available.
-        % Do something
-      end
+      % ------------------------------------------------------------
 
-      mag = data(1, 8:10)';
-      if ~any(isnan(mag))  % Mag measurements are available.
-        % Do something
-      end
 
-      orientation = data(1, 18:21)';  % Google's orientation estimate.
 
+
+
+      % --------------------- VISUALIZE RESULT ---------------------
+     
+      % Google's/Matlabs orientation estimate.
+      orientation = eul2quat([-dataOrient(1), dataOrient(3), -dataOrient(2)].*(pi/180),"ZYX");
+     
       % Visualize result
       if rem(counter, 10) == 0
         setOrientation(ownView, x(1:4));
@@ -107,8 +159,14 @@ function [xhat, meas] = filterTemplate(calAcc, calGyr, calMag)
           title(googleView, 'GOOGLE', 'FontSize', 16);
         end
       end
+      % Increment the counter
       counter = counter + 1;
+      % ------------------------------------------------------------
 
+
+
+    
+      % ------------------------ SAVE DATA -------------------------
       % Save estimates
       xhat.x(:, end+1) = x;
       xhat.P(:, :, end+1) = P;
@@ -119,10 +177,12 @@ function [xhat, meas] = filterTemplate(calAcc, calGyr, calMag)
       meas.gyr(:, end+1) = gyr;
       meas.mag(:, end+1) = mag;
       meas.orient(:, end+1) = orientation;
+
+      % -----------------------------------------------------------
+
+
     end
-  catch e
-    fprintf(['Unsuccessful connecting to client!\n' ...
-      'Make sure to start streaming from the phone *after*'...
-             'running this function!']);
-  end
+
+
 end
+
