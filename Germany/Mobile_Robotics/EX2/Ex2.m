@@ -145,7 +145,7 @@ title('Normalized Histograms of Distributions from Data Columns');
 hold off;
 
 %% D) 
-% Answer : col5 - Chi Squared, col1 and 3- Gaussian,col3 - Poisson, col4 -
+% Answer :col1 and col2- Gaussian,col3 - Poisson, col4 -
 % Binomial and col5 - Chi-Squared.
 
 %% E) 
