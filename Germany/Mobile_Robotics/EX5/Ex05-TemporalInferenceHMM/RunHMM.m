@@ -1,7 +1,7 @@
 close all; clear; clc;
 
 % Random seed (change in Ex05.1 c) + Ex05.2 b))
-RNDSEED = 15;
+RNDSEED = 100;
 % Sequence length K
 NOBSERVATIONS = 100;    
 % Note the coloring of the states: 1: blue, 2: green, 3: red
@@ -152,12 +152,10 @@ for t = 2:T
 end
 
 % Termination
-[~, path(T)] = max(viterbi(:, T));
+[~, path(T)] = max(viterbi(:, :));
 
-% Backtracking
-for t = T-1:-1:1
-    path(t) = backpointer(path(t+1), t+1);
-end
+
+
 
 % 1. Ground truth states
 figure;
