@@ -29,6 +29,7 @@ hold off
 %%
 % B Closed ICP
 
+
 x = [0;0;0];
 
 Omega = diag([1 1]);
