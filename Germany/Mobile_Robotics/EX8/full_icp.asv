@@ -8,8 +8,7 @@
     hold on; 
     GlobalT = [0 0]';
     GlobalR = [1 0 ;  0 1 ];
-    x_relaxed = [0 0 0 0 0 0]';
-    x = [0 0 0];
+    x = [0 0 0 0 0 0]';
     Omega = eye(2,2);
     
     for data_index =1:size(data,2)
@@ -25,12 +24,8 @@
         correspondence_scan_points = correspondence_scan.points;
         correspondence_scan_matching_points = transpose(correspondence_scan_points(current_scan_correspondences(:,2), :));
 
-%         [pcl,T,R] = Relaxed_icp(current_scan_matching_points,correspondence_scan_matching_points,x_relaxed, Omega);
-        [pcl,T,R,Theta] = Iterative_icp(current_scan_matching_points,correspondence_scan_matching_points,x, Omega);
-
-%         x_relaxed = [GlobalR(1,1) GlobalR(1,2) GlobalR(2,1) GlobalR(2,2) GlobalT(1) GlobalT(2)]';
-        x = [T;Theta];
-%         x = [0 0 0.25*pi];
+        [pcl,T,R] = Relaxed_icp(current_scan_matching_points,correspondence_scan_matching_points,x, Omega);
+        x = [GlobalR(1,1) GlobalR(1,2) GlobalR(2,1) GlobalR(2,2) GlobalT(1) GlobalT(2)]';
 
         GlobalT = GlobalR * T + GlobalT;
         GlobalR = GlobalR * R;
@@ -45,6 +40,8 @@
 
 
 function [rotated_PC ,T, R] = Relaxed_icp(current_scan_matching_points,correspondence_scan_matching_points,x, Omega)
+% MaxITR = 100
+%       for newt = 1:MaxITR 
             H = zeros(6,6);
             b = zeros(6,1);
      
@@ -60,15 +57,19 @@ function [rotated_PC ,T, R] = Relaxed_icp(current_scan_matching_points,correspon
                 e = h - correspondence_scan_matching_points(:,points_index);
                 
                 H = H + j' * Omega  * j;
-%                 lambda = 1e-6; % Regularization parameter
-%                 H = H + lambda * eye(size(H));
+                lambda = 1e-6; % Regularization parameter
+                H = H + lambda * eye(size(H));
                 b = b + j' * Omega * e;
                 
             end
         
             dx = H \ (-b);
+    %         if norm(dx) < 1e-6
+    %              break;
+    %         end
     
             x = x + dx;
+%       end
             A = [x(1:2)';x(3:4)'];
             [U,D,V] = svd(A);
             R = U*V';
@@ -79,6 +80,11 @@ function [rotated_PC ,T, R] = Relaxed_icp(current_scan_matching_points,correspon
             end
             
             T = mean(correspondence_scan_matching_points,2) - R * mean(current_scan_matching_points,2);
+%             prevT = prevR * T + prevT ;
+    
+%             prevR = prevR * R;
+    
+    
             rotated_PC = R * current_scan_matching_points + T;
                    
        
@@ -90,9 +96,7 @@ end
 
 
 
-function [plc ,T, R, Theta] =  Iterative_icp(P_new,P,x, Omega)
-max_iterations = 100;
-tolerance = 10^6;
+function Iterative_icp()
 
 for iterations=1:max_iterations
     
@@ -105,7 +109,7 @@ for iterations=1:max_iterations
         
         
         
-        h = [cos(Theta) -sin(Theta);sin(Theta) cos(Theta)] * P_new(:,i) + t;
+        h = [cos(Theta) -sin(Theta);sin(Theta) cos(Theta)] *        P_new(:,i) + t;
         e = h - P(:,i);
         j = [eye(2) [-sin(Theta) -cos(Theta); cos(Theta) -sin(Theta)]*P_new(:,i)];
         
@@ -116,18 +120,14 @@ for iterations=1:max_iterations
 
         dx = H \ (-b);
         x = x + dx;
-%         
-%         if norm(dx) < tolerance
-%             fprintf('Converged after %d iterations.\n', iterations);
-%             break;
-%         end
+        
+        if norm(dx) < tolerance
+            fprintf('Converged after %d iterations.\n', iterations);
+            break;
+        end
     
 end
 
 Theta = x(3);
-
-R = [cos(Theta) -sin(Theta);sin(Theta) cos(Theta)];
-T = [x(1);x(2)];
-
-plc = [cos(Theta) -sin(Theta);sin(Theta) cos(Theta)] * P_new + [x(1);x(2)];
+P_new_rotated_ICP = [cos(Theta) -sin(Theta);sin(Theta) cos(Theta)] * P_new + [x(1);x(2)];
 end
